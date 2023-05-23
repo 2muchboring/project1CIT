@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Menu Page</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 480px;
+      background: yellow;
+      margin: auto;
+     width: 480px;
+     margin-top: 30px;
+     box-shadow: 0px 2px 2px 2px black;
+     border-radius: 80px;
+      
+    }
+    
+    .logo {
+      margin-bottom: 20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 180px;
+      box-shadow: 0px 2px 2px 2px;
+    }
+        /* CSS for the main menu */
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        
+        /* CSS for the menu items */
+        .menu li {
+            display: block;
+        }
+        
+        /* CSS for the menu item links */
+        .menu li a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        /* CSS for the menu item links on hover */
+        .menu li a:hover {
+            background-color: #ddd;
+        }
+        
+        /* CSS for the active menu item */
+        .menu li.active a {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        /* CSS for the mobile responsive menu */
+        @media screen and (max-width: 600px) {
+            .menu li {
+                display: block;
+            }
+        }
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://media.istockphoto.com/id/1144476433/vector/hola-phrase-hand-drawn-vector-lettering-modern-typography-isolated-on-blue-background.jpg?s=612x612&w=0&k=20&c=KXR-Z3x0sfanxVjZx9mmtOfATky3c0-TrHQZFH4qV8w=" alt="Logo" class="logo">
+   
+   
+    <!-- Main menu -->
+    <ul class="menu">
+        <li><a class="active" href="designs.html">DESIGN</a></li>
+        <li><a href="food.html">ARRANGEMENTS</a></li>
+        <li><a href="fi.html">FOOD IDEAS</a></li>
+    </ul>
+   
+   
+   
+   
+   
+  </div>
+</body>
+</html>
+
+
+
+
+

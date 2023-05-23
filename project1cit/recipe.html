@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Recipe Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style media="screen">
+ 
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      background: yellow;
+      margin: auto;
+     width: 480px;
+     margin-top: 60px;
+     box-shadow: 0px 2px 2px 2px black;
+    border-radius: 30px 30px 0px 0px;
+      
+    }
+    
+    .logo {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 180px;
+      box-shadow: 0px 2px 2px 2px;
+    }
+        /* CSS for the main menu */
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        
+        /* CSS for the menu items */
+        .menu li {
+            display: block;
+        }
+        
+        /* CSS for the menu item links */
+        .menu li a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        /* CSS for the menu item links on hover */
+        .menu li a:hover {
+            background-color: #ddd;
+        }
+        
+        /* CSS for the active menu item */
+        .menu li.active a {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        /* CSS for the mobile responsive menu */
+        @media screen and (max-width: 600px) {
+            .menu li {
+                display: block;
+            }
+        }
+
+
+        * {box-sizing:border-box}
+
+
+
+        #slider{
+width:80%;
+margin:0px auto;
+margin-top: 30px;
+max-width: 600px;
+position:relative;
+overflow:hidden;
+border: 10px solid white;
+box-shadow:2px 5px 10px rgba(0,0,0,0.4);;
+}
+
+.slide{
+width:100%;
+
+display:none;
+animation-name:fade;
+animation-duration:1s;
+
+}
+img{
+width:100%;
+}
+@keyframes fade{
+from{opacity:0.5;}
+to{opacity:1;}
+}
+
+.controls{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:1.5em;
+padding:15px 10px;
+border-radius:5px;
+
+}
+
+.controls:hover{
+background:white;
+transition:0.3s;
+}
+
+.controls:active{
+color:grey;
+}
+
+#left-arrow{
+left:10px;
+}
+
+#right-arrow{
+right:10px;
+}
+
+#dots-con{
+
+text-align:center;
+}
+.dot{
+display:inline-block;
+background:grey;
+padding:8px;
+border-radius:50%;
+margin:10px 5px;
+}
+
+.active{
+background:rgb(7, 67, 213);
+}
+
+@media (max-width:576px){
+#slider{width:100%;
+
+}
+
+.controls{
+  font-size:1em;
+}
+
+#dots-con{
+  display:none;
+}
+}
+
+.title{
+  margin-top: 20px;
+  background: lightblue;
+  width: 200px;
+  transform: skewx(-10deg);
+  box-shadow: 2px 2px 2px 0px black;
+
+}
+.title h1{
+  text-align: center;
+}
+
+button{
+  border: none;
+  background-color: lightgreen;
+  height: 30px;
+  width: 100px;
+  border-radius: 30px;
+  font-size: large;
+  box-shadow: 0px 5px 5px 5px;
+  margin-bottom: 20px;
+
+}
+
+
+button:hover{
+  background-color: yellow;
+ }
+button a{
+  text-decoration: none;
+  color: black;
+}
+  </style>
+
+<script>
+ 
+</script>
+</head>
+<body>
+
+  
+  <div class="container">
+    <img src="https://media.istockphoto.com/id/1144476433/vector/hola-phrase-hand-drawn-vector-lettering-modern-typography-isolated-on-blue-background.jpg?s=612x612&w=0&k=20&c=KXR-Z3x0sfanxVjZx9mmtOfATky3c0-TrHQZFH4qV8w=" alt="Logo" class="logo">
+   
+   
+    <!-- Main menu -->
+    <ul class="menu">
+        <li><a  href="designs.html">DESIGN</a></li>
+        <li><a href="food.html">ARRANGEMENTS</a></li>
+        <li><a class="active" href="fi.html">FOOD IDEAS</a></li>
+    </ul>
+
+
+   <div class="title">
+    <i><h1>Food Ideas</h1></i>
+   </div>
+    
+    <!--Slider-->
+    <div id="slider">
+
+   
+      <div class="slide" style="background:dodgerBlue;">
+        <img src="" >
+      </div>
+  
+      <div class="slide" style="background:coral;">
+         <img src="" >
+      </div>
+  
+      <div class="slide" style="background:crimson;">
+        <img src="" >
+      </div>
+  
+      <div class="slide" style="background: #6edf10;">
+        <img src="" >
+      </div>
+  
+      <!--Controlling arrows-->
+      <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </span>
+      <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </span>
+    </div>
+      <div id="dots-con">
+     <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      
+    
+    </div>
+
+    <button><a href="designs.html">DESIGNS</a></button>
+
+   
+  </div>
+
+  
+  
+<script type="text/javascript">
+  var slides = document.querySelectorAll(".slide");
+  var dots = document.querySelectorAll(".dot");
+  var index = 0;
+  
+  
+  function prevSlide(n){
+    index+=n;
+    console.log("prevSlide is called");
+    changeSlide();
+  }
+  
+  function nextSlide(n){
+    index+=n;
+    changeSlide();
+  }
+  
+  changeSlide();
+  
+  function changeSlide(){
+  
+    if(index>slides.length-1)
+      index=0;
+  
+    if(index<0)
+      index=slides.length-1;
+  
+  
+  
+      for(let i=0;i<slides.length;i++){
+        slides[i].style.display = "none";
+  
+        dots[i].classList.remove("active");
+  
+  
+      }
+  
+      slides[index].style.display = "block";
+      dots[index].classList.add("active");
+  
+  
+  
+  }
+  
+  
+  
+  </script>
+
+
+</body>
+</html>
+
+
+
+
+
