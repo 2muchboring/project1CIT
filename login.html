@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 480px;
+      background: yellow;
+      margin: auto;
+     width: 480px;
+     margin-top: 30px;
+     box-shadow: 0px 2px 2px 2px black;
+     border-radius: 80px;
+      
+    }
+    
+    .logo {
+      margin-bottom: 20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 180px;
+      box-shadow: 0px 2px 2px 2px;
+    }
+    
+    .login-form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 240px;
+    }
+    
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .login-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    .login-button:hover {
+      background-color: #45a049;
+    }
+    
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('login-form');
+      
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        
+        if (username === 'admin' && password === 'admin') {
+          // Successful login, redirect to another page
+          window.location.href = 'menu.html';
+        } else {
+          var errorMessage = document.getElementById('error-message');
+          errorMessage.textContent = 'Invalid username or password.';
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="https://media.istockphoto.com/id/1144476433/vector/hola-phrase-hand-drawn-vector-lettering-modern-typography-isolated-on-blue-background.jpg?s=612x612&w=0&k=20&c=KXR-Z3x0sfanxVjZx9mmtOfATky3c0-TrHQZFH4qV8w=" alt="Logo" class="logo">
+  
+    <form id="login-form" class="login-form">
+      <input type="text" id="username" name="username" placeholder="Username" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <button class="login-button" type="submit">Login</button>
+      <div id="error-message" class="error-message"></div>
+    </form>
+  </div>
+</body>
+</html>
